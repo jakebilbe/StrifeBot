@@ -1,0 +1,9 @@
+{
+  "token": "BOT_TOKEN_HERE",
+  "game": "REPLACE_WITH_GAME",
+  "command": "CMD_TO_INIT_NAME_CHANGE",
+  "channel": "CHANNEL_ID_FOR_NEW_USERS",
+  "role": "MEMBER_ROLE",
+  "newMessage": "USER_IS_MENTIONED_BEFORE_THIS",
+  "replyMessage": "USER_IS_MENTIONED_BEFORE_THIS"
+}
