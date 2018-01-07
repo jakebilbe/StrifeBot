@@ -9,6 +9,9 @@
   "author": "Tasakio",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.2.1",
+    "md5": "^2.2.1",
+    "request": "^2.83.0"
   }
 }
