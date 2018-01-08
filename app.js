@@ -13,7 +13,7 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", member => {
   if(auth.advancedMode) {
-    let code = md5(member.user + auth.serverName.slice(1, 4));
+    let code = md5(member.user + auth.serverName);
     member.user.send({embed: {
     color: 3447003,
     description: "Strife-Bot is currently set to Advanced Mode, this means you are required to verify that the Character is yours. Please follow the steps below to verify your account, if you need help please contact an Admin on " + auth.serverName + ".",
@@ -41,16 +41,19 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if(auth.advancedMode) {
+
     if(message.content.startsWith(prefix + "verify")) {
       let arg = message.content.split(" ");
       let profile = arg[1];
-      let code = md5(message.user + auth.serverName.slice(1, 4));
+      let code = md5(message.author + auth.serverName);
+      message.channel.send(message.author + " please wait whilst I verify your account...");
 
       request('https://eu.finalfantasyxiv.com/lodestone/character/' + profile + '/', function (error, response, html) {
         if (!error && response.statusCode == 200) {
           var $ = cheerio.load(html);
           var characterName = $('.frame__chara__name')[0].children[0].data;
           var bioCode = $('.character__selfintroduction')[0].children[0].data.replace(/\s+/g, '');
+
           if(bioCode.indexOf(code) !== -1) {
             message.member.setNickname(characterName).catch(console.error);
             let role = message.guild.roles.find("name", auth.role);
