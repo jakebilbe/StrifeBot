@@ -11,6 +11,8 @@ You will find a file named **cpy_auth.json**, rename this to **auth.json** and e
 * **Role** - Please use the Name of the Role, not an ID
 * **Advanced Mode** - If set to False it requires `!name First Second` but if set to True then it generates an **MD5** Code and Direct Messages the User with instructions to Verify through Lodestone
 
+**PLEASE NOTE THAT THIS WILL NOT WORK FOR ANY ROLES HIGHER THAN THE BOT**
+
 ##### Required Permissions
 * Manage Roles
 * Manage Nicknames
