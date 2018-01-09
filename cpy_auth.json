@@ -1,7 +1,26 @@
 {
   "token": "BOT_TOKEN_HERE",
+  "advancedMode": false,
+  "debugMode": false,
   "serverName": "YOUR_SERVERS_NAME",
+  "regionCode": "en",
   "channel": "CHANNEL_ID",
-  "role": "ROLE_NAME",
-  "advancedMode": false
+  "defaultRole": "ROLE_NAME",
+  "rolesToGive": {
+    "CHARACTER_NAME": "ROLE_TO_GIVE",
+    "CHARACTER_NAME": "ROLE_TO_GIVE"
+  }
+}
+
+{
+  "token": "Mzk2NDU5NDk5MjU2NDE0MjA4.DShwOQ.B0Dt-Cn7rwkHzq09Q6ohQRlSPKE",
+  "serverName": "The RUIN of Man",
+  "regionCode": "en",
+  "channel": "398856555736596482",
+  "advancedMode": true,
+  "debugMode": false,
+  "role": "Member",
+  "rolesToGive": {
+    "Tasakio Saken": "Barter"
+  }
 }

@@ -6,10 +6,13 @@ Use your preferred method of obtaining this repository, open the folder in which
 
 You will find a file named **cpy_auth.json**, rename this to **auth.json** and edit the file to your own liking.
 
-* **Bot Token** - You can Generate a Bot Token [HERE](https://discordapp.com/developers/applications/me)
-* **Channel** - This must be the ID of the Channel you wish the Bot to listen to for new users
-* **Role** - Please use the Name of the Role, not an ID
+* **Bot Token** - Your generated Bot Token [HERE](https://discordapp.com/developers/applications/me)
+* **Region Code** - This is either *en, na or jp* depending on what region your Free Company is associated with
+* **Channel** - This must be the ID of the Channel *(Settings > Appearance > Developer Mode | Right Click Channel > Copy ID)*
 * **Advanced Mode** - If set to False it requires `!name First Second` but if set to True then it generates an **MD5** Code and Direct Messages the User with instructions to Verify through Lodestone
+* **Debug Mode** - Due to the nature of the bot, there are bound to be some bugs/issues so if you are having these please enable this and contact me with a screenshot of your console
+* **Default Role** - This must be the text name of the Role *(e.g. Member, Recruit, Veteran)* which will be given to any Verified users that aren't in **Roles to Give**
+* **Roles to Give** - An array of Keys:Values *(Character Name:Role)* that you can set to give certain users set roles, if you do not wish to use this feature close the brackets *(e.g. "rolesToGive": {})*
 
 **PLEASE NOTE THAT THIS WILL NOT WORK FOR ANY ROLES HIGHER THAN THE BOT**
 
